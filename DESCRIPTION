@@ -1,0 +1,10 @@
+Package: matchSCore
+Title: Matching Single-Cell Phenotypes Across Tools and Experiments
+Version: 0.0.0.9000
+Authors@R: person("Elisabetta", "Mereu", email = "elisabetta.mereu@cnag.crg.eu", role = c("aut", "cre"))
+Description: matchSCore is a Jaccard index-based metric enabling the integration and comparison of single-cell RNA-seq experiments from different technologies and/or analyzed with different tools by matching cluster-specific gene markers at different levels of specificity
+Depends: R (>= 3.4.0)
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1.9000
