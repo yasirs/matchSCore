@@ -2,4 +2,9 @@
 .Rhistory
 .Rapp.history
 
+# RStudio files
+.Rproj.user/
+.Rbuildignore
+
+#system directory
 .DS_Store
