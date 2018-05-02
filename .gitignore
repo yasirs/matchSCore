@@ -6,6 +6,5 @@
 .Rproj.user/
 .Rbuildignore
 
-
 #system directory
 .DS_Store
