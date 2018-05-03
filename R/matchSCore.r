@@ -1,6 +1,6 @@
-#' Compute the cellular phenotype matching across reference cell groups and computational clusters
+#' Compute the cellular phenotype matching across simulated cell groups and computational clusters
 #'
-#' This function computes the matchSCore across reference gene markers provided from the simulation or an optimal solution and 
+#' This function computes the matchSCore across gene markers provided from the simulation and 
 #' cluster-specific genes computationally obtained from the tool. 
 #' @param gene_markers A list of gene markers. Each element of the list represents the set of markers for each biological group.
 #' @param gene_cl A list of cluster-specific gene sets to match with gene_markers.

@@ -83,5 +83,22 @@ matchSCore(markers,gene_cl,lab)
 
 ##Clustering Annotation
 
-data
+The matchSCore matrix can be also used to match clusters from two different experiments.
+For example, you could use the top100 ranked markers we got (by using Seurat) from the Smart-Seq2 and Chromium bladder sample from the Tabula Muris Atlas.
+You can load files directly from the data folder in this repository. 
+
+```{r,eval=FALSE}
+## We use Smart-Seq2 data as the reference data
+load(file="data/gene_cl.ref_bladder.RData")
+
+## And Chromium data as test data
+load(file="data/gene_cl.obs_bladder_droplet.RData")
+
+## The matchSCore2 function computes the clustering comparison and produce the heatmap table with matchSCore values for each group combination
+out=matchSCore2(gene_cl.ref,gene_cl.obs,tissue = "Bladder",ylab = "Smart-Seq2",xlab = "Chromium")
+
+## The matchSCore heatmap is stored in the ggplot slot of out.  
+out$ggplot
+
+```
 

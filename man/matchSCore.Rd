@@ -2,7 +2,7 @@
 % Please edit documentation in R/matchSCore.r
 \name{matchSCore}
 \alias{matchSCore}
-\title{Compute the cellular phenotype matching across reference cell groups and computational clusters}
+\title{Compute the cellular phenotype matching across simulated cell groups and computational clusters}
 \usage{
 matchSCore(gene_markers, gene_cl, labels)
 }
@@ -17,7 +17,7 @@ matchSCore(gene_markers, gene_cl, labels)
 A value from 0 to 1 representing the matchSCore between gene_cl and gene_markers. A matchSCore of 1 is the total match.
 }
 \description{
-This function computes the matchSCore across reference gene markers provided from the simulation or an optimal solution and 
+This function computes the matchSCore across gene markers provided from the simulation and 
 cluster-specific genes computationally obtained from the tool.
 }
 \examples{
