@@ -22,9 +22,9 @@ install_github('elimereu/matchSCore')
 
 The matchSCore is a Jaccard Index based metric that enables the direct comparison of clusters predicted by a tool for a simulated (1) or real data set (2). It allows to:
 
-1. Track the accuracy trend of a tool in clustering and marker identification compared with the optimal solution provided by a simulated data set. In this case, matchSCore works in combination with the Splatter package - https://github.com/Oshlack/splatter/blob/master/vignettes/splatter.Rmd - . (## Benchmarking)
+1. Track the accuracy trend of a tool in clustering and marker identification compared with the optimal solution provided by a simulated data set. In this case, matchSCore works in combination with the Splatter package - https://github.com/Oshlack/splatter/blob/master/vignettes/splatter.Rmd - . (Benchmarking)
 
-2. Score the matching between your clusters and cell identities from a reference data set. (## Cluster annotation) 
+2. Score the matching between your clusters and cell identities from a reference data set. (Cluster annotation) 
 
 
 ## Benchmarking by using simulated data
@@ -36,6 +36,10 @@ library(matchSCore)
 library(splatter)
 library(scater)
 library(MixSim)
+## To plot
+library(ggplot2) 
+library(ggpubr)
+
 
 ## For example we create a simulated data set with 4 groups of equal proportions. 
 sim <- splatSimulate(batchCells=rep(500,2),group.prob=rep(0.25,4),method = "groups")
@@ -45,7 +49,7 @@ n_groups <- 4
 rank_df <- rank_sim(sim)
 
 ## Set the proportion of top ranked genes (specificity) we want to output
-specificity=0.1
+specificity=0.2
 ## feature info data frame
 fd <- rowData(sim)
 ##List of markers per group
@@ -54,7 +58,6 @@ markers_pos <- markers_by_specificity(rank_df,specificity,n_groups) ## by positi
 ## List with the top 10% ranked markers per group
 sim.markers <- lapply(markers_pos,function(x) fd$Gene[x])
 sim.markers
-
 
 ```
 
@@ -66,7 +69,7 @@ For example, we could use Seurat to analyze this data set by running the functio
 out_seu <-seurat_run(sim,ntop=100,out_seu = NULL,res = NULL,dims.use = NULL,test.de = "wilcox")
 
 pd=colData(sim)
-lab.sim <- pd$Group
+lab.sim <- as.integer(factor(pd$Group))
 idc <- out_seu$clusters ## Seurat clusters
 gene_cl <- out_seu$gene_cl ## Seurat cluster genes
 
@@ -77,7 +80,20 @@ lab <- compute_labels(lab.sim,idc)
 RandIndex(lab.sim,idc) ## we can compute the Rand Index (RI), adjusted Rand Index (ARI) or F score
 
 ## Now, we can compute the matchSCore value 
-matchSCore(markers,gene_cl,lab)
+matchSCore(markers_pos,gene_cl,lab)
+#0.10
+
+## Let's plot the matchSCore trend by using different values of top ranked markers (ntop). 
+
+ntop=seq(250,2000,250)
+## The score function compute a matchSCore at all different values of ntop.
+ms=scores(sim,out_seu,ntop,seurat_run,lab)
+
+## Now we can plot the matchSCore curve
+
+scores_df=data.frame(ms)
+tscores_plots(scores_df)
+
 
 ```
 

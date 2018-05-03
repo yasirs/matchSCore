@@ -7,8 +7,6 @@
 
 tscores_plots = function(scores_df){
 
-  library(ggplot2)
-  library(ggpubr)
   
   names(scores_df)[c(2,3)]=c("top_genes","matchSCore")
   
