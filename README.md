@@ -24,9 +24,9 @@ install_github('elimereu/matchSCore')
 
 The matchSCore is a Jaccard Index based metric that enables the direct comparison of clusters predicted by a tool for a simulated (1) or real data set (2). It allows to:
 
-1. Track the accuracy trend of a tool in clustering and marker identification compared with the optimal solution provided by a simulated data set. In this case, matchSCore works in combination with the Splatter package - https://github.com/Oshlack/splatter/blob/master/vignettes/splatter.Rmd - . (Benchmarking)
+1. Track the accuracy trend of a tool in clustering and marker identification compared with the optimal solution provided by a simulated data set. In this case, matchSCore works in combination with the Splatter package - https://github.com/Oshlack/splatter/blob/master/vignettes/splatter.Rmd - . (**Benchmarking**)
 
-2. Score the matching between your clusters and cell identities from a reference data set. (Cluster annotation) 
+2. Score the matching between your clusters and cell identities from a reference data set. (**Cluster annotation**) 
 
 
 ## Benchmarking by using simulated data
