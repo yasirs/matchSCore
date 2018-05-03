@@ -27,7 +27,7 @@ The matchSCore is a Jaccard Index based metric that enables the direct compariso
 2. Score the matching between your clusters and cell identities from a reference data set. (Cluster annotation) 
 
 
-## Benchmarking with a simulated data set
+## Benchmarking by using simulated data
 
 
 ```{r,eval=FALSE}
