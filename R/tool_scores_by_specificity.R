@@ -1,4 +1,4 @@
-#' Compute matchSCore for different thresholds of specificity and ntop ranked genes
+#' Compute matchSCore for a specified value of specificity and ntop ranked genes
 #'
 #' This function computes the matchSCore for different cutoffs of marker specificity and top cluster markers
 #' @param sim A Splatter simulation object.
@@ -7,7 +7,7 @@
 #' @param ntop The proportion of top-ranked markers for each cluster.
 #' @param tool_run The name of the function used to run the clusters without quote (Default= seurat_run).
 #' @param labels Cluster labels as in the output of the compute_labels function.
-#' @return 
+#' @return A matchSCore value
 #' @export
 #' @examples
 #' 

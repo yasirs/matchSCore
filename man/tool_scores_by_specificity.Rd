@@ -2,7 +2,7 @@
 % Please edit documentation in R/tool_scores_by_specificity.R
 \name{tool_scores_by_specificity}
 \alias{tool_scores_by_specificity}
-\title{Compute matchSCore for different thresholds of specificity and ntop ranked genes}
+\title{Compute matchSCore for a specified value of specificity and ntop ranked genes}
 \usage{
 tool_scores_by_specificity(sim, specificity, tool_out, ntop,
   tool_run = seurat_run, labels)
@@ -19,6 +19,9 @@ tool_scores_by_specificity(sim, specificity, tool_out, ntop,
 \item{tool_run}{The name of the function used to run the clusters without quote (Default= seurat_run).}
 
 \item{labels}{Cluster labels as in the output of the compute_labels function.}
+}
+\value{
+A matchSCore value
 }
 \description{
 This function computes the matchSCore for different cutoffs of marker specificity and top cluster markers

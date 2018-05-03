@@ -9,9 +9,6 @@ tscores_plots(scores_df)
 \arguments{
 \item{scores}{A character vector of reference group labels.}
 }
-\value{
-A ggplot
-}
 \description{
 This function identifies true label groups between reference groups and clusters
 }

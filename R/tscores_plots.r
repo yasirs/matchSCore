@@ -2,7 +2,6 @@
 #'
 #' This function identifies true label groups between reference groups and clusters
 #' @param scores A character vector of reference group labels.
-#' @return A ggplot
 #' @export
 #' @examples
 
