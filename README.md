@@ -6,7 +6,9 @@ The package and the repository will be regularly updated with other reference da
 
 ## Installation
 
-This is a development version of matchSCore running on R (>= 3.4.0).
+This is a development version of matchSCore running on R (>= 3.4.0). 
+The package makes use of splatter_1.2.1, scater_1.6.3, MixSim_1.1-3 and ggplot2_2.2.1, ggpubr_0.1.6 libraries. Other libraries are also used for clustering and identification of markers (e.g. Seurat_2.2.1, SC3_1.7.7).
+
 matchSCore can be installed by devtools:
 
 ```{r,eval=FALSE}
@@ -83,7 +85,14 @@ RandIndex(lab.sim,idc) ## we can compute the Rand Index (RI), adjusted Rand Inde
 matchSCore(markers_pos,gene_cl,lab)
 #0.10
 
-## Let's plot the matchSCore trend by using different values of top ranked markers (ntop). 
+## If you want to increase the number of ntop to see if the matchSCore is higher, you can run the seurat_run function, but passing its old output to be faster
+gene_cl=seurat_run(sim,ntop=500,out_seu,res = NULL,dims.use = NULL,test.de = "wilcox")
+
+## And then re-compute the matchSCore 
+matchSCore(markers_pos,gene_cl,lab)
+#[1] 0.2283748
+
+## Let's plot the matchSCore trend by using different values of top ranked markers (ntop) and specificity (proportion of true group markers). 
 
 ntop=seq(250,2000,250)
 ## The score function compute a matchSCore at all different values of ntop.
