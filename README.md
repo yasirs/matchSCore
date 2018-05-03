@@ -84,7 +84,7 @@ matchSCore(markers,gene_cl,lab)
 ## Clustering Annotation
 
 The matchSCore matrix can be also used to match clusters from two different experiments.
-For example, you could use the top100 ranked markers we got (by using Seurat) from the Smart-Seq2 and Chromium bladder sample from the Tabula Muris Atlas.
+For example, you could use the top 100 ranked markers we got (by using Seurat) from the Smart-Seq2 and Chromium bladder sample from the Tabula Muris Atlas.
 You can load files directly from the data folder in this repository. 
 
 ```{r,eval=TRUE}
