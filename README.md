@@ -83,14 +83,14 @@ RandIndex(lab.sim,idc) ## we can compute the Rand Index (RI), adjusted Rand Inde
 
 ## Now, we can compute the matchSCore value 
 matchSCore(markers_pos,gene_cl,lab)
-#0.10
+
 
 ## If you want to increase the number of ntop to see if the matchSCore is higher, you can run the seurat_run function, but passing its old output to be faster
 gene_cl=seurat_run(sim,ntop=500,out_seu,res = NULL,dims.use = NULL,test.de = "wilcox")
 
 ## And then re-compute the matchSCore 
 matchSCore(markers_pos,gene_cl,lab)
-#[1] 0.2283748
+
 
 ## Let's plot the matchSCore trend by using different values of top ranked markers (ntop) and specificity (proportion of true group markers). 
 
