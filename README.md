@@ -27,7 +27,7 @@ The matchSCore is a Jaccard Index based metric that enables the direct compariso
 2. Score the matching between your clusters and cell identities from a reference data set. (Cluster annotation) 
 
 
-##Benchmarking with a simulated data set
+## Benchmarking with a simulated data set
 
 
 ```{r,eval=FALSE}
@@ -81,7 +81,7 @@ matchSCore(markers,gene_cl,lab)
 
 ```
 
-##Clustering Annotation
+## Clustering Annotation
 
 The matchSCore matrix can be also used to match clusters from two different experiments.
 For example, you could use the top100 ranked markers we got (by using Seurat) from the Smart-Seq2 and Chromium bladder sample from the Tabula Muris Atlas.
