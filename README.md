@@ -1,8 +1,9 @@
 ## Introduction
 
-matchSCore is a basic R package for the comparison of single cell RNA-seq data across tools and experiments.
+matchSCore is a easy-to-use R package for the comparison of single cell RNA-seq data across tools and experiments.
 The purpose of this vignette is to guide you to the use of the matchSCore with some examples. 
-The package and the repository will be regularly updated with other reference data that you can use to annotate your clusters.  
+The package and the repository will be regularly updated with other reference data that you can use to annotate your clusters.
+Additional information about matchSCore and its applications are in our bioRxive paper at the following link: https://www.biorxiv.org/content/early/2018/05/07/314831 
 
 ## Installation
 
