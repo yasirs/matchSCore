@@ -2,7 +2,7 @@
 #'
 #' This function identifies true label groups between reference groups and clusters
 #' @param idc A character vector of reference group labels.
-#' @param idc1 Vector of label for clusters.
+#' @param idc1 Vector of labels for clusters.
 #' @return Vector of corresponding reference labels for clusters. 
 #' @export
 #' @examples
