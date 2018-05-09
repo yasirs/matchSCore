@@ -6,7 +6,8 @@
 #' @param ntop The number of top markers you want.
 #' @return A list of ntop markers per cluster.
 #' 
-#' 
+#' @export
+#' @examples
 #' 
 
 
