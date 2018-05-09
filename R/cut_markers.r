@@ -5,8 +5,8 @@
 #' @param markers A data.frame as in the output of the FindAllMarkers Seurat function.
 #' @param ntop The number of top markers you want.
 #' @return A list of ntop markers per cluster.
-#' @export
-#' @examples
+#' 
+#' 
 #' 
 
 
