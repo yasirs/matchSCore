@@ -17,7 +17,7 @@ cut_markers <- function(clusters,markers,ntop){
   # levels(clusters)=seq(0:l)-1
   lev=levels(clusters)
   gene_cl=lapply(lev,function(x) markers$gene[markers$cluster==x][1:ntop])
-
+  names(gene_cl)=lev
   return(gene_cl)
 }
 
